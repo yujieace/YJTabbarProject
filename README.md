@@ -18,3 +18,8 @@ pod 'pop'</br>
 YJTabBarController *tab=[[YJTabBarController alloc] init];</br>
 也可以继承YJTabBarController并实现YJTabBarDelegate（optional）的方式来自定义</br>
 <h3>需要设置的部分</3></br>
+参照demo，必须设置的内容是viewControllers,normalImages或者defaultIcon</br>
+标题是viewcontroll的title属性</br>
+<h3>值得一提的部分</h3>
+该Controller的生命周期和UIViewcontroller一直，所以可以使用viewDidLoad或者viewDidAppear等方法。</br>
+千万记得要调用super方法，以让父类的布局等内容生效。</br>
