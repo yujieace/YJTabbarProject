@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "mainTabViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +19,47 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    mainTabViewController *tab=[[mainTabViewController alloc] init];
+    UIViewController *v1=[[UIViewController alloc] init];
+    v1.view.backgroundColor=[UIColor colorWithRed:0.832 green:1.000 blue:0.250 alpha:1.000];
+    v1.title=@"第一个";
+    
+    UIViewController *v2=[[UIViewController alloc] init];
+    v2.view.backgroundColor=[UIColor colorWithRed:0.301 green:0.661 blue:1.000 alpha:1.000];
+    v2.title=@"第二个";
+    
+    UIViewController *v3=[[UIViewController alloc] init];
+    v3.view.backgroundColor=[UIColor colorWithRed:1.000 green:0.572 blue:0.600 alpha:1.000];
+    v3.title=@"第三个";
+    
+    
+    UIViewController *v4=[[UIViewController alloc] init];
+    v4.view.backgroundColor=[UIColor colorWithRed:0.574 green:0.314 blue:1.000 alpha:1.000];
+    v4.title=@"第四个 导航栏";
+    
+    //支持超过4个vc的导航
+    UINavigationController *nav=[[UINavigationController alloc] initWithRootViewController:v4];
+    
+    tab.viewControllers=[[NSMutableArray alloc] initWithObjects:v1,v2,v3,nav,nil];
+    for (int i=0; i<4; i++) {
+        UIViewController *vv=[[UIViewController alloc] init];
+        vv.view.backgroundColor=[UIColor colorWithRed:1.000 green:0.029 blue:0.988 alpha:1.000];
+        vv.title=[NSString stringWithFormat:@"第%d个",i+5];
+        [tab.viewControllers addObject:vv];
+    }
+    tab.enableTapAnimation=YES;
+    tab.bumpHeigh=20;
+    tab.CenterImage=[UIImage imageNamed:@"扫一扫"];
+    NSMutableArray *normalImage=[[NSMutableArray alloc] init];
+    for (int i=0; i<8; i++) {
+        [normalImage addObject:[UIImage imageNamed:@"qr"]];
+    }
+    tab.normalImages=normalImage;
+    tab.selectedImages=normalImage;
+    self.window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController=tab;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
