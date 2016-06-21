@@ -17,9 +17,14 @@ pod 'pop'</br>
 <h3>初始化</h3></br>
 YJTabBarController *tab=[[YJTabBarController alloc] init];</br>
 也可以继承YJTabBarController并实现YJTabBarDelegate（optional）的方式来自定义</br>
-<h3>需要设置的部分</3></br>
+<h3>需要设置的部分</h3></br>
 参照demo，必须设置的内容是viewControllers,normalImages或者defaultIcon</br>
 标题是viewcontroll的title属性</br>
 <h3>值得一提的部分</h3>
-该Controller的生命周期和UIViewcontroller一直，所以可以使用viewDidLoad或者viewDidAppear等方法。</br>
+1.该Controller的生命周期和UIViewcontroller一致，所以继承后可以使用viewDidLoad或者viewDidAppear等方法。</br>
 千万记得要调用super方法，以让父类的布局等内容生效。</br>
+2.adjustTintColor属性默认为YES，实际效果为官方TabBarController的效果，设置view的TintColor属性即可改变选中时的高亮色，设置为NO以后可以直接用全彩的icon图标</br>
+3.bumpHeigh属性为中心的UIView凸起的高度，根据需求设置，默认为0，不凸起。</br>
+4.enableTapAnimation属性决定是否启用点击时的动画，默认为启用。</br>
+5.如需要对图标进行进一步的DIY，请移步iconView类中，可以自行定义相关的组件和动画。</br>
+
