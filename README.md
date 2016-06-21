@@ -1,5 +1,4 @@
 <h1>自定义的不规则TabViewController</h1></br>
-<a href="http://i1.piimg.com/4851/c80c297f6c30dcaf.png" title="点击显示原始图片"><img src="http://i1.piimg.com/4851/c80c297f6c30dcaft.jpg"></a>
 
 <a href="http://i1.piimg.com/4851/a164f31dab2dd803.png" title="点击显示原始图片"><img src="http://i1.piimg.com/4851/a164f31dab2dd803t.jpg"></a>
 <a href="http://i1.piimg.com/4851/c80c297f6c30dcaf.png" title="点击显示原始图片"><img src="http://i1.piimg.com/4851/c80c297f6c30dcaft.jpg"></a>
