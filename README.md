@@ -13,9 +13,11 @@
 布局依赖Masonry</br>
 动画依赖Pop</br>
 使用Cocoapods管理依赖，所以，需要在podfile中添加：</br>
+```
 pod 'Masonry'</br>
 pod 'pop'</br>
 </br>
+```
 
 <h2>以下是非常接地气的文档</2>
 <h3>Tips</h3>
