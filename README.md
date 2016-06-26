@@ -21,11 +21,11 @@ pod 'pop'
 <h2>以下是非常接地气的文档</2>
 <h3>Tips</h3>
 1.该Controller的生命周期和UIViewcontroller一致，所以继承后可以使用viewDidLoad或者viewDidAppear等方法。</br>
-*adjustTintColor属性默认为YES，实际效果为官方TabBarController的效果，设置view的TintColor属性即可改变选中时的高亮色，设置为NO以后可以直接用全彩的icon图标</br>
-*bumpHeigh属性为中心的UIView凸起的高度，根据需求设置，默认为0，不凸起。</br>
-*enableTapAnimation属性决定是否启用点击时的动画，默认为启用。</br>
-*如需要对图标进行进一步的DIY，请移步iconView类中，可以自行定义相关的组件和动画。</br>
-*·隐藏和现实TabBar· 为达到官方在Push时可以实现隐藏TabBar的效果，你可以在需要隐藏TabBar的时候，通过发送HIDETAB通知来实现.如下</br>
+1.adjustTintColor属性默认为YES，实际效果为官方TabBarController的效果，设置view的TintColor属性即可改变选中时的高亮色，设置为NO以后可以直接用全彩的icon图标</br>
+1.bumpHeigh属性为中心的UIView凸起的高度，根据需求设置，默认为0，不凸起。</br>
+1.enableTapAnimation属性决定是否启用点击时的动画，默认为启用。</br>
+1.如需要对图标进行进一步的DIY，请移步iconView类中，可以自行定义相关的组件和动画。</br>
+1.隐藏和显示TabBar, 为达到官方在Push时可以实现隐藏TabBar的效果，你可以在需要隐藏TabBar的时候，通过发送HIDETAB通知来实现.如下</br>
 
 ```Objective-C
 //显示
