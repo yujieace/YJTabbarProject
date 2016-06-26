@@ -9,6 +9,15 @@
 <img src="http://img7.qiyipic.com/image/appstore/20151221/7d/a7/201377220_89_1_1450703699402_16x9.jpg" width="200" height ="355"></br>
 找了一圈找不到合适的框架，于是只能自己造轮子了。</br>
 
+<h2>已经实现的功能</h2>
+1. 添加多个viewController，并设置相应的图标
+2. 自动设置图标的高亮色，设置TabBar的TintColor即可实现，默认为系统的蓝色
+3. 可自定义取消高亮色，实现全彩色图标显示。
+4. 隐藏和显示TabBar(使用方法见下方说明)
+5. 点击产生动画效果。可自行修改代码进行自定义
+6. 自定义突起的高度，便于实现更多效果
+7. 可通过代码切换viewController，通过实现protocol可以实现更多自定义效果。
+
 <h2>依赖</h2></br>
 布局依赖Masonry</br>
 动画依赖Pop</br>
@@ -26,6 +35,8 @@ pod 'pop'
 4.enableTapAnimation属性决定是否启用点击时的动画，默认为启用。</br>
 5.如需要对图标进行进一步的DIY，请移步iconView类中，可以自行定义相关的组件和动画。</br>
 6.隐藏和显示TabBar, 为达到官方在Push时可以实现隐藏TabBar的效果，你可以在需要隐藏TabBar的时候，通过发送HIDETAB通知来实现.如下</br>
+7.在显示时，原viewController的frame的大小会被重设以适应当前的显示效果，建议使用AutoLayout以便适应不同分辨率</br>
+
 
 ```Objective-C
 //显示
