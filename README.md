@@ -17,7 +17,7 @@ pod 'Masonry'</br>
 pod 'pop'</br>
 </br>
 
-
+<h2>以下是非常接地气的文档</2>
 <h3>Tips</h3>
 1.该Controller的生命周期和UIViewcontroller一致，所以继承后可以使用viewDidLoad或者viewDidAppear等方法。</br>
 2.adjustTintColor属性默认为YES，实际效果为官方TabBarController的效果，设置view的TintColor属性即可改变选中时的高亮色，设置为NO以后可以直接用全彩的icon图标</br>
