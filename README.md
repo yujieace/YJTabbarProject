@@ -24,7 +24,15 @@ pod 'pop'</br>
 3.bumpHeigh属性为中心的UIView凸起的高度，根据需求设置，默认为0，不凸起。</br>
 4.enableTapAnimation属性决定是否启用点击时的动画，默认为启用。</br>
 5.如需要对图标进行进一步的DIY，请移步iconView类中，可以自行定义相关的组件和动画。</br>
+6.·隐藏和现实TabBar· 为达到官方在Push时可以实现隐藏TabBar的效果，你可以在需要隐藏TabBar的时候，通过发送HIDETAB通知来实现.如下</br>
 
+```Objective-C
+//显示
+[[NSNotificationCenter defaultCenter] postNotificationName:@"SHOWTAB" object:nil];
+
+//隐藏
+[[NSNotificationCenter defaultCenter] postNotificationName:@"HIDETAB" object:nil];
+```
 
 <h3>头文件和详细使用说明</h3>
 
@@ -33,9 +41,6 @@ pod 'pop'</br>
 //  YJTabBarController.h
 //  可自定义TabBar和中心的按钮,实现不规则的中心按钮
 //  TabBar的viewController数量最少4个或者更多，可以实现较为美观的布局。如低于4个需自己实现相关的布局。
-//  TabBar可以隐藏，通过发送对应的通知即可
-//  显示TabBar: [[NSNotificationCenter defaultCenter] postNotificationName:@"SHOWTAB" object:nil];
-//  隐藏TabBar: [[NSNotificationCenter defaultCenter] postNotificationName:@"HIDETAB" object:nil];
 
 //  Created by YuJie on 16/6/13.
 //  Copyright © 2016年 YuJie. All rights reserved.
