@@ -239,6 +239,7 @@
     UIViewController *dest=[_viewControllers objectAtIndex:index];
     UIView *view=dest.view;
     view.frame=CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-_tabBar.bounds.size.height+_bumpHeigh);
+    [currentView removeFromSuperview];
     currentView=view;
     [self.view insertSubview:view belowSubview:_tabBar];
     if([self.deleagte respondsToSelector:@selector(tabBarDidShowViewControllFrom:toIndex:)])
